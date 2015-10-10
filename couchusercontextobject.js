@@ -21,7 +21,7 @@ module.exports = function buildUserContextObject(info) {
   //a default userCtx (admin party like)
   return {
     db: info.db_name,
-    name: null,
+    name: localStorage.getItem('pouch.userCtx.name'),
     roles: ["_admin"]
   };
 };
